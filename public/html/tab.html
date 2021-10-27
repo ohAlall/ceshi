@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cor{
+            background-color: rgb(155, 70, 70);
+        }
+    </style>
+</head>
+<body>
+    <ul class="ul">
+        <li>我第1个</li>
+        <li>我第2个</li>
+        <li>我第3个</li>
+    </ul>
+    <div class="box">
+        <div>内容1</div>
+        <div>内容2</div>
+        <div>内容3</div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".box div").eq(0).show().siblings().hide()
+        $("ul li").click(function(){
+            $(this).addClass('cor').siblings().removeClass('cor')
+            $(".box div").eq($(this).index()).show().siblings().hide()
+        })
+        })
+
+    </script>
+</body>
+</html>

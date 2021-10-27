@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(213, 195, 195);
+        }
+        .box{
+            width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+        }
+        Ul{
+            list-style: none;
+            position: fixed;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .cor{
+            background-color: rgb(120, 231, 82);
+        }
+        li{
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+            background-color: rgb(175, 214, 216);
+        }
+        .box1,.box2,.box3,.box4,.box5,.box6{
+            margin-top: 50px;
+            width: 100%;
+            height: 300px;
+            background-color: rgb(210, 219, 233);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1 w">盒子1</div>
+        <div class="box2 w">盒子2</div>
+        <div class="box3 w">盒子3</div>
+
+        <div class="box4 w">盒子4</div>
+        <div class="box5 w ">盒子5</div>
+        <div class="box6 w">盒子6</div>
+
+    </div>
+    <ul>
+        <li>box1</li>
+        <li>box2</li>
+        <li>box3</li>
+        <li>box4</li>
+        <li>box5</li>
+        <li>box6</li>
+    </ul>
+    <script src="../js/jquery.min.js"></script>
+    <script >
+        $(function(){ 
+            var flag = true;//节流阀 控制点击和滚动事件 
+            $("ul").on("click","li",function(){
+                flag = false;
+            $(this).addClass("cor").siblings().removeClass("cor")
+            console.log($(this).index() );
+            var index =$(this).index();
+            var box = $(".w").eq(index).offset().top;
+            // console.log($(".w").eq(index).offset());
+            $("body,html").stop().animate({
+                scrollTop:box
+            },function () {
+                flag = true;
+            })
+            })
+
+
+
+            $(window).scroll(function(){
+               // toggleTool();
+                if(flag){
+                $(".w").each(function(i,el){
+                    if($(document).scrollTop() >= $(el).offset().top){
+                        $("li").eq(i).addClass("cor").siblings().removeClass("cor")
+                    }
+                })
+              }
+            })
+        })
+  
+            
+
+    
+    </script>
+</body>
+</html>

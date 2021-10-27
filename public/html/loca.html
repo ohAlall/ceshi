@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- jq  文件 -->
+        <script src="../js/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+                 body{
+               background-color: rgba(155, 199, 221, 0.095);
+           }
+           *{
+               margin: 0;
+               padding: 0;
+           }
+           ol{ margin: 20px 0;
+               background-color: rgba(148, 202, 209, 0.755);
+           }
+           ul{
+               background-color: rgba(130, 130, 145, 0.292);
+           }
+           ol , ul{
+               width:100%;
+               height: 100%;
+               list-style: none;
+           }
+           .box{
+               margin: 200px 200px  0;
+           }
+           .te{
+              border:none;
+              outline: none;
+               border-bottom: 1px solid black;
+           }
+          a{
+               display: block;
+               text-decoration: none;
+               width: 30px;
+               height: 30px;
+               line-height: 30px;
+               text-align: center;
+               border-radius: 50%;
+               background-color: rgba(204, 138, 138, 0.755);
+           }
+           li{
+               display: flex;
+               padding: 0px 20px;
+               justify-content: space-between;
+           }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            今日待办 <input type="text" class="te">
+          </div>
+          <ol>
+          </ol>
+          <ul>
+          </ul>
+    </div>
+    <script>
+         add ();//打开浏览器先渲染一次
+         //按下回车键的触发事件
+        $(".te").keydown(function(e){
+            if(e.keyCode === 13){ // 回车键的keyCode 码 是13 
+                var loca = getI();//先获取到本地储存
+                console.log(loca);
+                loca.push({//修改本地储存
+                    title: $(this).val(),
+                    done:false
+                });
+                setI (loca );//上传到本地储存
+                add ();//渲染到页面
+            }
+        })
+
+        //点击删除操作
+        $(".box").on("click","a",function(){
+            var data = getI();//获取本地储存
+            console.log(data);
+            var index = $(this).siblings().attr("id");//获取删除的对象
+            data.splice(index,1)//删除本地储存的对象
+            setI (data)//添加到本地储存
+            add ();//渲染页面
+        })
+
+        //多选框的点击选中事件
+        $("ol,ul").on("click","input",function(){
+            var data = getI();//获取本地储存
+            var index =  $(this).siblings("a").attr("id");//获取删除对象（自定义的索引
+            console.log(index);
+            data[index].done = $(this).prop('checked')//将多选框的状态赋值给本地储存
+            setI (data );//上传到本地储存
+            add ();//渲染到页面
+        })
+
+
+        //获取本地数据( 获取数据库后台数据)  需要多次用到，建议封装函数
+        function getI (){
+         var data = localStorage.getItem('todo');//获取本地储存  todo
+         if(data != null){  //如果值不为空 返回一个对象
+             return JSON.parse(data);//本地储存只能储存字符串 获取的 需要转换为js对象
+         }else{
+             return [];//如果值为空返回一个数组
+         }
+        }
+        //设置后台数据添加后台数据
+        function setI (data){
+            localStorage.setItem("todo",JSON.stringify(data))//储存的数据需要储蓄为字符串     设置后台储存数据 
+        }
+        //向页面渲染数据
+        function add (){
+            //读取到数据
+            var data = getI();
+            //设置内容为空
+            $('ol,ul').empty();
+            //遍历储存的对象，获取到对象值
+            $.each(data,function(i,n){
+                if(n.done){
+                    $("ul").prepend('<li><input type="checkbox"  checked="checked"  name="" ><p>'+n.title+'</p><a href="javascript:;" id="'+i+'">del</a></li>')
+                }else{
+                 $("ol").prepend('<li><input type="checkbox" name="" id="'+i+'"><p>'+n.title+'</p><a href="javascript:;" id="'+i+'">del</a></li>')
+                }
+            })
+            
+        }
+    </script>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/slide.css">
+</head>
+<body>
+              <!-- 效果展示 -->
+              <div class="box3_t">
+                <button  class="bot_top btn btn-primary" >关闭</button>
+                  <div class="div">
+                    <div class="arrow arrowleft">＜</div>
+                    <div class="arrow arrowright" >＞</div>
+                    <img  class="demol" src="./images/1.jpg" alt="">
+                    <ul class="indexes">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+              </div>
+              <script>
+                var demol = document.querySelector('.demol');
+                var ul = document.querySelector('.indexes');
+                var indexes = ul.querySelectorAll('li');
+                var index = 0; 
+                let arr= [
+               "./images/1.jpg",
+               "./images/2.jpg",
+               "./images/3.jpg",
+               "./images/4.jpg" ,
+               "./images/5.jpg",
+               ];
+               var next =document.querySelector('.arrowleft');
+               var prev =document.querySelector('.arrowright');
+                  let tiemr = -1;/*声明定时器*/
+                  for (let i = 0; i < indexes.length; i++) {
+                      /*遍历ul */ //    console.log(indexes[i]);
+                  
+                      indexes[i].onmouseenter = function (){
+                          /*注册li的鼠标点击事件*/
+                       index = i;
+                       clearInterval(tiemr);/*停止定机器播放*/
+                       setStyle();/*小圆圈*/
+                      }
+                      indexes[i].onmouseleave = function (){
+                           /*注册li的鼠标离开事件*/
+                       run();/*调用定时器*/
+          
+                      }
+                  }
+                 /*封装函数，定时器*/
+                  function run(){
+                   tiemr = setInterval(() => {
+                   index++;  /*从0开始自增，如果等于图片的length 设置为0 播放第一张*/
+                    if(index === arr.length) index = 0;
+                    setStyle()/*小圆圈*/
+                   }, 1000);
+                  }
+                  run();
+                  function setStyle(){/*小圆圈*/
+                   demol.src = arr[index];/*数组图片赋值给damol，进而修改img的src*/
+                   var active = document.getElementsByClassName('active')[0]/*排他思想*/
+                   active.classList.remove('active');/*移除*/
+                   indexes[index].classList.add('active');  /*添加*/
+                  }
+                    /*切换下一张*/
+               next.addEventListener('click', function(){
+                   index--;
+                   // next.style.backgroundColor = 'redrgb(140, 156, 162)';
+                       if (index === -1) index = arr.length-1;
+                       clearInterval(tiemr);
+                       setStyle();
+                       run();
+               })
+               /*切换上一张*/
+               prev.addEventListener('click',function(){
+                       index++;
+                   if (index ===arr.length) index = 0;
+                   clearInterval(tiemr);
+                   setStyle();
+                   run();          
+               })
+          
+          
+           </script>
+</body>
+</html>

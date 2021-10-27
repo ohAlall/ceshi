@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+   <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" >
+    <link rel="shortcut icon" href="./images/2.ico" type="image/x-icon">
+    <!-- 清除公共样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!--模板css  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 主题 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- logo -->
+    <link rel="stylesheet" href="./css/logo.css">
+    <!-- Import style -->
+    <link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
+    <!-- Import Vue 3 -->
+    <script src="//unpkg.com/vue@next"></script>
+    <!-- Import component library -->
+    <script src="//unpkg.com/element-plus"></script>
+    <script src="//unpkg.com/element-plus/dist/index.full.js"></script>
+<style>
+  
+@media(max-width:950px) {
+  .aside_rig{
+    display: none;
+  }
+  .header{
+    width: 75%;
+  }
+  .aside_l{
+    width:25% ;
+  }
+  /* .nav li:nth-child(n+2){
+    display: none;
+  }
+  .nav li:nth-child(1){
+    width: 100% !important;
+  } */
+}
+</style>
+    <title>OH</title>
+</head>
+<body>
+    <!-- //左侧导航栏 -->
+    <aside class="aside aside_l">
+        <div class="logo">
+          <a href="/">
+            <svg viewBox="0 0 400 200">
+              <text x="0" y="70%"> OH </text>
+          </svg> 
+             <!-- <img src="./images/logo1.png" alt="logo" class="logo_img"> -->
+         </a>
+           
+        </div>
+        <ul class="flex">
+            <li class="both"> <i class="el-icon-document-copy" ></i>特效</li>
+            <li class="both "><i class="el-icon-document-copy"></i> HTML</li>
+            <li class="both"><i class="el-icon-document-copy" ></i>CSS</li>
+            <li class="both"><i class="el-icon-document-copy" ></i>JS</li>
+            <li class="both"> <i class="el-icon-document-copy" ></i>特效</li>
+            <li class="both "><i class="el-icon-document-copy"></i> HTML</li>
+            <li class="both"><i class="el-icon-document-copy" ></i>CSS</li>
+            <li class="both"><i class="el-icon-document-copy" ></i>JS</li>
+            <li class="both"> <i class="el-icon-document-copy" ></i>特效</li>
+            <li class="both "><i class="el-icon-document-copy"></i> HTML</li>
+            <li class="both"><i class="el-icon-document-copy" ></i>CSS</li>
+            <li class="both"><i class="el-icon-document-copy" ></i>JS</li>
+        </ul>
+        
+    </aside>
+
+    <!-- 主体 -->
+    <header class="header">
+        <div class="box">
+          <!-- 头部导航 -->
+            <ul>
+                <li ><a href="/">首页</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/">首页</a></li>
+            </ul>
+            <!-- 搜索框 -->
+            <div class="box_r">
+              <div class="box_r1">
+               <input type="text" placeholder="按特效关键字搜索" class="so">
+               <span class="el-icon-search"></span>
+            </div>
+                <a href="/Login.html" class="btn btn-default sign " role="button">登录</a>
+                <a href="/out.html"  class="btn btn-default register" role="button">注册</a>
+            </div>
+  
+        </div>
+        <!-- 模式选择 -->
+        <div class="box2">
+            <ul>
+              <li class="cor imageM ">图像模式</li>
+                <li class="listM">列表模式</li>
+               
+            </ul>
+        </div>
+        <!-- 小模块内容 -->
+        <div class="box3">
+            <ul class="ul3">
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4 ">
+                    <img src="./images/1.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">轮播图</h3>
+                      <p class="lang">html&css3&javascript</p>
+                      <p>
+                        <a href="/slide.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                        <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4">
+                    <img src="./images/5.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">tab</h3>
+                      <p class="lang">html&css3&jq</p>
+                      <p>
+                        <a href="./public/html/tab.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                        <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4">
+                    <img src="./images/1.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">高亮显示/遮罩层</h3>
+                      <p class="lang">html&css3</p>
+                      <p>
+                        <a href="./public/html/s.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                        <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4">
+                    <img src="./images/1.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">logo动画</h3>
+                      <p class="lang">html&css3&javascript</p>
+                      <p>
+                        <a href="./public/html/logo.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                        <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4">
+                    <img src="./images/5.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">边框动画特效4</h3>
+                      <p class="lang">html&css3&jq</p>
+                      <p>
+                        <a href="./public/html/border4.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                        <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4 ls_t">
+                    <img src="./images/1.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">文字故障效果</h3>
+                      <p class="lang">html&css3</p>
+                      <p>
+                        <a href="./public/html/text.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                      <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4 ls_t">
+                    <img src="./images/1.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">本地储存数据获取</h3>
+                      <p class="lang">html&css3&jq</p>
+                      <p>
+                        <a href="./public/html/loca.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                      <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4 ls_t">
+                    <img src="./images/5.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">电梯导航案例</h3>
+                      <p class="lang">html&css3&jq</p>
+                      <p>
+                        <a href="./public/html/run.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                      <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+                <li class="ls">
+                  <div class="thumbnail col-sm-12 col-md-4 ls_t">
+                    <img src="./images/1.jpg" alt="图片" class="imggss">
+                    <div class="caption">
+                      <h3 class="tit">时钟插件</h3>
+                      <p class="lang">插件</p>
+                      <p>
+                        <a href="./public/html/hou.html" class="btn1  btn btn-primary" role="button">详情</a> 
+                        <a href="javascript:;" class="bt0 btn btn-default" role="button">修改</a>
+                        <a href="javascript:;" class="bt2 btn btn-default" role="button">添加</a>
+                        <a href="javascript:;" class="bt3 btn btn-default" role="button">删除</a>
+                      </p>
+                    </div>
+                  </div>
+                    <!-- 修改内容 -->
+                    <div class="box3_boom">
+                      <div>标题:<input type="text" name="" id="" class="in0"></div>
+                      <div>语言:<input type="text" name="" id="" class="in1"></div>
+                      <div>路径:<input type="text" name="" id="" class="in2"></div>
+                      <div>代码:
+                        <textarea name="" id="" cols="30" rows="10" class="in3"></textarea>
+                        </div>
+                      <button class="bot_bom btn btn-primary">提交</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="back">back</div>
+            
+        </div>
+    </header>
+    <!-- 右边 -->
+    <aside class="aside  aside_rig">
+      <div  class="logo" id="main">
+
+      </div>
+      <ul>
+        <li class="both"> <i class="el-icon-document-copy" ></i>特效</li>
+        <li class="both "><i class="el-icon-document-copy"></i> HTML</li>
+        <li class="both"><i class="el-icon-document-copy" ></i>CSS</li>
+        <li class="both"><i class="el-icon-document-copy" ></i>Js</li>
+        <li class="both"> <i class="el-icon-document-copy" ></i>特效</li>
+        <li class="both "><i class="el-icon-document-copy"></i> HTML</li>
+        <li class="both"><i class="el-icon-document-copy" ></i>CSS</li>
+        <li class="both"><i class="el-icon-document-copy" ></i>Js</li>
+        <li class="both"> <i class="el-icon-document-copy" ></i>特效</li>
+        <li class="both "><i class="el-icon-document-copy"></i> HTML</li>
+        <li class="both"><i class="el-icon-document-copy" ></i>CSS</li>
+        <li class="both"><i class="el-icon-document-copy" ></i>Js</li>
+    </ul>
+  </aside>
+    <!-- jq  文件 -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- 模板bootstrap js -->
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- 引入主题js文件 -->
+    <script src="./js/index.js"></script>
+  
+    <script src="./js/echarts.min.js"></script>
+  <script src="./hour.js"></script>
+    
+    <script lang="ts">
+      $(function(){
+         var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+    
+    option = {
+      series: [
+        {
+          name: 'hour',
+          type: 'gauge',
+          startAngle: 90,
+          endAngle: -270,
+          min: 0,
+          max: 12,
+          splitNumber: 12,
+          clockwise: true,
+          axisLine: {
+            lineStyle: {
+              width: 15,
+              color: [[1, 'rgba(0,0,0,0.7)']],
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+              shadowBlur: 15
+            }
+          },
+          splitLine: {
+            lineStyle: {
+              shadowColor: 'rgba(0, 0, 0, 0.3)',
+              shadowBlur: 3,
+              shadowOffsetX: 1,
+              shadowOffsetY: 2
+            }
+          },
+          axisLabel: {
+            fontSize: 50,
+            distance: 25,
+            formatter: function (value) {
+              if (value === 0) {
+                return '';
+              }
+              return value + '';
+            }
+          },
+          anchor: {
+            show: false,
+            icon: 'path://M532.8,70.8C532.8,70.8,532.8,70.8,532.8,70.8L532.8,70.8C532.7,70.8,532.8,70.8,532.8,70.8z M456.1,49.6c-2.2-6.2-8.1-10.6-15-10.6h-37.5v10.6h37.5l0,0c2.9,0,5.3,2.4,5.3,5.3c0,2.9-2.4,5.3-5.3,5.3v0h-22.5c-1.5,0.1-3,0.4-4.3,0.9c-4.5,1.6-8.1,5.2-9.7,9.8c-0.6,1.7-0.9,3.4-0.9,5.3v16h10.6v-16l0,0l0,0c0-2.7,2.1-5,4.7-5.3h10.3l10.4,21.2h11.8l-10.4-21.2h0c6.9,0,12.8-4.4,15-10.6c0.6-1.7,0.9-3.5,0.9-5.3C457,53,456.7,51.2,456.1,49.6z M388.9,92.1h11.3L381,39h-3.6h-11.3L346.8,92v0h11.3l3.9-10.7h7.3h7.7l3.9-10.6h-7.7h-7.3l7.7-21.2v0L388.9,92.1z M301,38.9h-10.6v53.1H301V70.8h28.4l3.7-10.6H301V38.9zM333.2,38.9v10.6v10.7v31.9h10.6V38.9H333.2z M249.5,81.4L249.5,81.4L249.5,81.4c-2.9,0-5.3-2.4-5.3-5.3h0V54.9h0l0,0c0-2.9,2.4-5.3,5.3-5.3l0,0l0,0h33.6l3.9-10.6h-37.5c-1.9,0-3.6,0.3-5.3,0.9c-4.5,1.6-8.1,5.2-9.7,9.7c-0.6,1.7-0.9,3.5-0.9,5.3l0,0v21.3c0,1.9,0.3,3.6,0.9,5.3c1.6,4.5,5.2,8.1,9.7,9.7c1.7,0.6,3.5,0.9,5.3,0.9h33.6l3.9-10.6H249.5z M176.8,38.9v10.6h49.6l3.9-10.6H176.8z M192.7,81.4L192.7,81.4L192.7,81.4c-2.9,0-5.3-2.4-5.3-5.3l0,0v-5.3h38.9l3.9-10.6h-53.4v10.6v5.3l0,0c0,1.9,0.3,3.6,0.9,5.3c1.6,4.5,5.2,8.1,9.7,9.7c1.7,0.6,3.4,0.9,5.3,0.9h23.4h10.2l3.9-10.6l0,0H192.7z M460.1,38.9v10.6h21.4v42.5h10.6V49.6h17.5l3.8-10.6H460.1z M541.6,68.2c-0.2,0.1-0.4,0.3-0.7,0.4C541.1,68.4,541.4,68.3,541.6,68.2L541.6,68.2z M554.3,60.2h-21.6v0l0,0c-2.9,0-5.3-2.4-5.3-5.3c0-2.9,2.4-5.3,5.3-5.3l0,0l0,0h33.6l3.8-10.6h-37.5l0,0c-6.9,0-12.8,4.4-15,10.6c-0.6,1.7-0.9,3.5-0.9,5.3c0,1.9,0.3,3.7,0.9,5.3c2.2,6.2,8.1,10.6,15,10.6h21.6l0,0c2.9,0,5.3,2.4,5.3,5.3c0,2.9-2.4,5.3-5.3,5.3l0,0h-37.5v10.6h37.5c6.9,0,12.8-4.4,15-10.6c0.6-1.7,0.9-3.5,0.9-5.3c0-1.9-0.3-3.7-0.9-5.3C567.2,64.6,561.3,60.2,554.3,60.2z',
+            showAbove: false,
+            offsetCenter: [0, '-35%'],
+            size: 120,
+            keepAspect: true,
+            itemStyle: {
+              color: '#707177'
+            }
+          },
+          pointer: {
+            icon: 'path://M2.9,0.7L2.9,0.7c1.4,0,2.6,1.2,2.6,2.6v115c0,1.4-1.2,2.6-2.6,2.6l0,0c-1.4,0-2.6-1.2-2.6-2.6V3.3C0.3,1.9,1.4,0.7,2.9,0.7z',
+            width: 12,
+            length: '55%',
+            offsetCenter: [0, '8%'],
+            itemStyle: {
+              color: '#C0911F',
+              shadowColor: 'rgba(0, 0, 0, 0.3)',
+              shadowBlur: 8,
+              shadowOffsetX: 2,
+              shadowOffsetY: 4
+            }
+          },
+          detail: {
+            show: false
+          },
+          title: {
+            offsetCenter: [0, '30%']
+          },
+          data: [
+            {
+              value: 0
+            }
+          ]
+        },
+        {
+          name: 'minute',
+          type: 'gauge',
+          startAngle: 90,
+          endAngle: -270,
+          min: 0,
+          max: 60,
+          clockwise: true,
+          axisLine: {
+            show: false
+          },
+          splitLine: {
+            show: false
+          },
+          axisTick: {
+            show: false
+          },
+          axisLabel: {
+            show: false
+          },
+          pointer: {
+            icon: 'path://M2.9,0.7L2.9,0.7c1.4,0,2.6,1.2,2.6,2.6v115c0,1.4-1.2,2.6-2.6,2.6l0,0c-1.4,0-2.6-1.2-2.6-2.6V3.3C0.3,1.9,1.4,0.7,2.9,0.7z',
+            width: 8,
+            length: '70%',
+            offsetCenter: [0, '8%'],
+            itemStyle: {
+              color: '#C0911F',
+              shadowColor: 'rgba(0, 0, 0, 0.3)',
+              shadowBlur: 8,
+              shadowOffsetX: 2,
+              shadowOffsetY: 4
+            }
+          },
+          anchor: {
+            show: true,
+            size: 20,
+            showAbove: false,
+            itemStyle: {
+              borderWidth: 15,
+              borderColor: '#C0911F',
+              shadowColor: 'rgba(0, 0, 0, 0.3)',
+              shadowBlur: 8,
+              shadowOffsetX: 2,
+              shadowOffsetY: 4
+            }
+          },
+          detail: {
+            show: false
+          },
+          title: {
+            offsetCenter: ['0%', '-40%']
+          },
+          data: [
+            {
+              value: 0
+            }
+          ]
+        },
+        {
+          name: 'second',
+          type: 'gauge',
+          startAngle: 90,
+          endAngle: -270,
+          min: 0,
+          max: 60,
+          animationEasingUpdate: 'bounceOut',
+          clockwise: true,
+          axisLine: {
+            show: false
+          },
+          splitLine: {
+            show: false
+          },
+          axisTick: {
+            show: false
+          },
+          axisLabel: {
+            show: false
+          },
+          pointer: {
+            icon: 'path://M2.9,0.7L2.9,0.7c1.4,0,2.6,1.2,2.6,2.6v115c0,1.4-1.2,2.6-2.6,2.6l0,0c-1.4,0-2.6-1.2-2.6-2.6V3.3C0.3,1.9,1.4,0.7,2.9,0.7z',
+            width: 4,
+            length: '85%',
+            offsetCenter: [0, '8%'],
+            itemStyle: {
+              color: '#C0911F',
+              shadowColor: 'rgba(0, 0, 0, 0.3)',
+              shadowBlur: 8,
+              shadowOffsetX: 2,
+              shadowOffsetY: 4
+            }
+          },
+          anchor: {
+            show: true,
+            size: 15,
+            showAbove: true,
+            itemStyle: {
+              color: '#C0911F',
+              shadowColor: 'rgba(0, 0, 0, 0.3)',
+              shadowBlur: 8,
+              shadowOffsetX: 2,
+              shadowOffsetY: 4
+            }
+          },
+          detail: {
+            show: false
+          },
+          title: {
+            offsetCenter: ['0%', '-40%']
+          },
+          data: [
+            {
+              value: 0
+            }
+          ]
+        }
+      ]
+    };
+    setInterval(function () {
+      var date = new Date();
+      var second = date.getSeconds();
+      var minute = date.getMinutes() + second / 60;
+      var hour = (date.getHours() % 12) + minute / 60;
+      option.animationDurationUpdate = 300;
+      myChart.setOption({
+        series: [
+          {
+            name: 'hour',
+            animation: hour !== 0,
+            data: [{ value: hour }]
+          },
+          {
+            name: 'minute',
+            animation: minute !== 0,
+            data: [{ value: minute }]
+          },
+          {
+            animation: second !== 0,
+            name: 'second',
+            data: [{ value: second }]
+          }
+        ]
+      });
+    }, 1000);
+    
+    option && myChart.setOption(option);
+
+
+
+      })
+
+</script>
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,284 @@
+body{
+    display: flex;
+    height:1180px ;
+    font-size: 18px;
+    color: #fff;
+    overflow: auto;
+    background-color: #283142;
+}
+// *{
+//     background-color: #afbbec !important;
+// }
+//返回顶部按钮
+.back{
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: rgb(70, 115, 221);
+}
+//侧边导航
+.aside{
+    width:14%;
+    background-color: #010107d5;
+    //height: 100%;
+    height:1180px ;
+    //logo
+    .logo{
+         text-align: center;
+         background-color: #283142;
+         height: 174px;
+         line-height: 174px;
+         img{
+             width: 75%;
+             height: 75%;
+         }
+    }
+    //导航栏
+    ul{
+        // position: absolute;
+        width: 100%;
+        height: 100%;
+        &:first-child{
+            border-top: 1px solid #20202c;
+        }
+        i{
+            text-align: left;
+            margin:0 20px;
+        }
+        li::before,
+        li::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+        }
+        li{
+            position: relative;
+            cursor: pointer;
+            transition: color 1s;
+            // box-shadow: inset 0 0 0 1px #fff;
+            height: 58px;
+            text-align: left;
+            line-height: 58px;
+            border-bottom: 1px solid #20202c;
+            &:hover {
+                color: #00e2ff;
+              }
+        }
+        .both:hover::before {
+            transition: width 0.5s, height 0.5s, border-bottom-color 0s;
+            transition-delay: 0.5s, 0s, 0.5s;
+            width: 100%;
+            height: 58px;
+            border-left: 1px solid #00e2ff;
+            border-bottom: 1px solid #00e2ff;
+          }
+          .both:hover::after {
+            transition: width 0.5s, height 0.5s, border-right-color 0.5s;
+            transition-delay: 0s, 0.5s, 0.5s;
+            width: 100%;
+            height: 58px;
+            border-top: 1px solid #00e2ff;
+            border-right: 1px solid #00e2ff;
+          }
+    }
+}
+//主体
+.header{
+    // flex: 1;
+    width: 72%;
+    background-color: #283142;
+    //顶部动态菜单栏
+    .box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 94px;
+        background-color:#101928d0;
+        ul{
+            display: flex;
+            margin-left: 46px;
+            margin-bottom: 1px;
+            width: 60%;
+            a{
+                text-decoration: none;
+            }
+            li{
+                width: 20%;
+                text-align: center;
+                line-height: 94px;
+                a{
+                    color: #fff;
+                }
+                a:hover{
+                    color: #fb8a07; 
+                }
+                &:hover{
+                    box-shadow: 1px 1px 5px 0px #ffa40059;
+                    border-bottom:  1px solid #fb8907b4;
+                }
+            }
+        }
+        .ami{
+            padding: 10px;
+            width: 200px !important;
+            transform: scaleX(1) !important;
+            transform-origin: 100% 0%;
+        }
+        //顶部 搜索框 登录注册
+        .box_r{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width:40%;
+            text-align: center;
+            padding-right: 20px;
+            .btn-default{
+                margin: 0 5px;
+                padding: 0;
+                width: 80px;
+                height: 40px;
+                line-height: 40px;
+            }    
+            .box_r1{
+                position: relative;  
+                margin-right: 10px;
+            input{
+                position: absolute;            
+                right: 40px;
+                border: none;
+                color: black;
+                width: 0px;
+                height: 40px;  
+                transition: transform .5s;
+                transform: scaleX(0);
+            }
+            .el-icon-search{
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 30px;
+                color: black;
+                // border: 1px solid black;
+                border-radius: 0 8px 8px 0;
+                background-color: #546889;
+            }
+    
+        } 
+
+        }
+    }
+    // 显示模式    
+    .box2{
+        height: 80px;
+       .cor{
+        width: 128px;
+        height: 40px;
+        border: 1px solid #2d96e5;
+        background-color: #275b8a;
+       }
+        ul{
+            display: flex;
+            margin: 0 auto; 
+            height: 80px;
+            width: 390px;
+            li{
+                margin-top: 18px;
+                margin-left: 10px;
+                width: 130px;
+                height: 42px;
+                text-align: center;
+                line-height: 42px;
+                border: 1px solid #313b4c;           
+            }
+        }
+    }
+    //  展示区
+    .box3{
+         position: relative;
+        padding: 64px 64px 0 64px;
+        height: 100%;
+        overflow: auto;
+        background-color: #1c2431d9;
+        .thumbnail {
+            border: 20px solid #1e2634;
+            .imggss{
+                width: 278px;
+                height: 180px;
+            }
+        }
+        // .ul3{
+        //     display: flex;
+        // }
+        // .ls{
+        // margin: 5px;
+        //   width: 790px;
+        //   height: 340px;
+        // }
+        .lb{
+            width: 100%;
+            height: 50px;
+            margin: 50px 0; 
+        }
+        .lb .lbb{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .box3_t{
+            display: none;
+            position: absolute;
+            top: 174px;
+            width: 1050px;
+            height: 650px;
+            background-color: rgba(250, 250, 250, 0.891);
+           .div{
+               margin: 20px auto;
+           }
+        }
+    }
+    //修改区域
+    .box3_boom{
+        position: absolute;
+        display: none;
+        top: 174px;
+        width: 1000px;
+        height: 650px;
+        background-color: #0e89bd;
+        z-index: 5;
+        div{
+            color: black;
+            margin: 20px;
+        }
+        input{
+            width: 800px;
+        }
+        .in3{
+            resize: none;
+            width: 800px;
+            height: 400px;
+        }
+        .bot_bom{
+            margin: 20px 0 20px 750px;
+           
+            width: 100px;
+            height: 35px;
+
+        }
+    }
+}
+
+//右侧
+.aside_rig{
+}

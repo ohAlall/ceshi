@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none; /*取消下划线*/
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;/*取消图片的底部留白bug*/
+}
+input {
+  padding: 0;
+  border: none;
+  outline: none;/*取消轮廓线样式*/
+  color: #333;
+}
+button {
+  cursor: pointer;
+}
+/* 清除浮动 */
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}

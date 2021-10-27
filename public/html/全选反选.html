@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+      全选  <input type="checkbox" name="" id="">
+    </div>
+    <div class="box2">
+      反选  <input type="checkbox" name="" id="" class="bins">
+    </div>
+    <div class="box1">
+        fuxuan  <input type="checkbox" name="" id="" class="ins">
+        fuxuan  <input type="checkbox" name="" id="" class="ins">
+        shou  <input type="checkbox" name="" id="" class="ins">
+        shou  <input type="checkbox" name="" id="" class="ins">
+        fuxuan  <input type="checkbox" name="" id="" class="ins">
+
+        shou  <input type="checkbox" name="" id="" class="ins">
+      </div>
+      <script src="../js/jquery.min.js"></script>
+      <script>
+        //全选
+          $(".box input").change(function(){
+              console.log(1);
+              $(".box1 input").prop("checked",$(this).prop("checked"))
+          })
+          //反选
+          $(".bins").change(function(){
+            // $(".ins").prop("checked",!$(this).prop("checked"))
+            // if( $(".ins").prop("checked")){
+            //   $(".ins").siblings().prop("checked",false) 
+            // }
+            let flag = $(".ins").prop("checked");
+            console.log($(".ins").prop("checked"));
+            if(flag){
+              $(".ins").prop("checked",false);
+            }else{
+              $(".ins").prop("checked",true);
+            }
+            // $(".ins").prop("checked",!flag);
+           
+          })
+          //控制部份
+          $(".ins").change(function(){
+              if($(".ins:checked").length ===  $(".ins").length){
+                $(".box input").prop("checked",true)
+              }else{
+                $(".box input").prop("checked",false)
+              }
+          })
+      </script>
+</body>
+</html>

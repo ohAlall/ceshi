@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+
+        .box3{
+            position: relative;
+            width: 400px;
+            height: 100px;
+            background-color: rgba(241, 142, 142, 0.605);
+        }
+        input{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0px;
+            height: 25px;
+            background: deeppink;
+            transition: transform .5s;
+            transform: scaleX(0);
+        }
+        .box3:hover input{
+            width: 200px;
+            transform: scaleX(1);
+            transform-origin: 100% 0%;
+        }
+        .box{
+            width: 200px;
+            height: 20px;
+            background-color: rgb(78, 65, 65);
+        }
+    </style>
+</head>
+<body>
+    <div class="box3">
+        <div class="box"></div>
+       <input type="text" name="" id="">
+    </div>
+</body>
+</html>
